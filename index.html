@@ -20,8 +20,8 @@
         <h2 class="title">¡Hola! Mi nombre es Macarena Ailen Aliberti </h2>
         <p>Soy docente residente en Ituzaingó, Buenos Aires. Licenciada y Profesora Nacional de Educación Física, pero en los últimos años descubrí una nueva afinidad: la programación. 
             Después de realizar algunos cursos, me cautivó todo lo que podía crear con la tecnología. 
-            Este entusiasmo me llevó a los 31 años a iniciar mi formación en Henry, donde estoy creciendo en este fascinante campo lleno de oportunidades. 
-            Estoy emocionada por todo lo que me espera y por cómo puedo combinar mis habilidades previas con este nuevo camino profesional. </p>
+            Este entusiasmo me llevó a los 31 años a iniciar mi formación en Henry, donde estoy creciendo en este fascinante campo lleno de oportunidades. </p>
+        <p>Estoy emocionada por todo lo que me espera y por cómo puedo combinar mis habilidades previas con este nuevo camino profesional. </p>
     </section>
 
 </div>
@@ -31,11 +31,16 @@
         <p> Cuando comencé a sumergirme en este nuevo mundo de la Programación, conocí Tecnologías nuevas tales como ChatGPT, HTML, CSS, GitHub, GitBash, JavaScript, entre otras, cada una de ellas con su particularidad, funcionalidad y complejidad con las que sigo trabajando y aprendiendo día a día. A continuación presento tres de ellas.</p>
     <ol>
         <div class="logo">
-        <li>GIT BASH<img src="Imagenes/git bash.jpg" />
+        
+        <li>
+            <div class="nombreImagen">    
+            <span>GITBASH</span>
+            </div>
+            <img src="Imagenes/git bash.jpg" />
         </div>
        </li>
        <div class="logo">
-    <li>OPENAI GPT<img src="Imagenes/OpenAI GPT.jpg" />
+    <li>GPT<img src="Imagenes/OpenAI GPT.jpg" />
     </div>
         </li>
         <div class="logo">
@@ -47,23 +52,76 @@
 </div>
 
 <div id="contenedor-seccion3"> 
-<section>
-    <h2 class="title"> Mis Actividades Favoritas</h2>
-    <p> Disfruto de.... </p>
-<form>
     
-    <input type="text" name="TITULO" placeholder="TITULO"/>
-    
-    <input type="text" name="DESCRIPCIÓN" placeholder="DESCRIPCIÓN"/>
-    
-    <input type="text" name="URL DE LA IMÁGEN" placeholder="URL DE LA IMÁGEN"/>
-</form> 
+    <section id="crear-actividades">
+        <h2 class="title">Mis Actividades Favoritas</h2>
+        <form id="actividad-form">
+          <label for="titulo">Título:</label>
+          <input type="text" id="titulo" placeholder="Ingresa el título" required>
+      
+          <label for="descripcion">Descripción:</label>
+          <textarea id="descripcion" placeholder="Ingresa la descripción" required></textarea>
+      
+          <label for="url">URL de la imagen:</label>
+          <input type="url" id="url" placeholder="Ingresa la URL de la imagen" required>
+      
+          <button type="submit">Crear Actividad</button>
+        </form>
+      
+        <!-- El contenedor de tarjetas está oculto inicialmente y será mostrado con JavaScript -->
+        <div id="contenedor-tarjetas" style="display: none;">
+          <!-- Las tarjetas se agregarán aquí -->
+        </div>
+      </section>
+      
+      
 
-</section>
 </div>
 
 </main>
 
 <footers> </footers>
+
+<script> 
+document.getElementById("actividad-form").addEventListener("submit", function(event) {
+    // Prevenimos que el formulario se envíe de manera tradicional
+    event.preventDefault();
+  
+    // Obtenemos los valores de los inputs
+    const titulo = document.getElementById("titulo").value;
+    const descripcion = document.getElementById("descripcion").value;
+    const url = document.getElementById("url").value;
+  
+    // Validamos si todos los campos están completos
+    if (titulo && descripcion && url) {
+      // Mostramos el contenedor de tarjetas
+      document.getElementById("contenedor-tarjetas").style.display = "flex";
+  
+      // Creamos una nueva tarjeta
+      const tarjeta = document.createElement("div");
+      tarjeta.classList.add("tarjeta");
+  
+      // Agregamos el título, descripción y la imagen
+      tarjeta.innerHTML = `
+        <h3>${titulo}</h3>
+        <p>${descripcion}</p>
+        <img src="${url}" alt="Imagen de la actividad">
+      `;
+  
+      // Agregamos la tarjeta al contenedor de tarjetas
+      document.getElementById("contenedor-tarjetas").appendChild(tarjeta);
+  
+      // Limpiamos los campos del formulario
+      document.getElementById("titulo").value = '';
+      document.getElementById("descripcion").value = '';
+      document.getElementById("url").value = '';
+    } else {
+      alert("Por favor, completa todos los campos.");
+    }
+  });
+  
+</script>
+
 </body>
+
 </html>

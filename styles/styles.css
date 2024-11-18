@@ -7,14 +7,15 @@ body {
 
 .title {
     font-size: 2em;
-    color:#030200e3
+    color:#030200e3;
+    text-align: center; /* Centra el texto dentro del contenedor */
+    margin-bottom: 10px; /* Espacio debajo del título */
 
 } 
 
 #principal {
     font-size: 4em;
     color:#0c0904;
-    border: 5px solid rgb(113,99,99);
     margin: auto;
     width: 85vw;
     border-radius: 15px;
@@ -26,33 +27,126 @@ body {
     border-radius: 15px;  /* Bordes redondeados */
     margin-top: 2em;
     margin:auto;
-    padding:2em;
-    display:flex;
+    display: block; /* Asegura que la imagen se comporte como un elemento de bloque */
     justify-content: space-evenly;
-   
     transition: transform 0.3s ease;  /* Transición suave cuando cambia el tamaño */
+    padding: 20px;
+    
 }
 .logo:hover {
         transform: scale(1.2);  /* Agranda la imagen al 120% */
+       
+    }
+
+.logo img {
+        width: 100%; /* Ajusta la imagen al contenedor */
+        border-radius: 15px; /* Bordes redondeados */
+        display: block; /* Evita que la imagen tenga un margen extra */
     }
 
 #contenedor-seccion1 {
-width: 85vw;
-margin: auto;
-border: 5px solid rgb(113,99,99);
-border-radius: 15px;
+width: 75vw;
+margin: 20px auto; /* Espacio externo: 20px arriba y abajo, centrado horizontalmente */
+border-radius: 30px;
+background-color: #d8b16e;
+padding: 20px; /* Espaciado interno */
 }
 
 #contenedor-seccion2 {
-width: 85vw;
-margin: auto;
-border: 5px solid rgb(113,99,99);
-border-radius: 15px;
+background-color: #d6b57c;
+width: 75vw;
+margin: 20px auto; /* Espacio externo: 20px arriba y abajo, centrado horizontalmente */
+border-radius: 30px;
+padding: 20px;
 }
 
 #contenedor-seccion3 {
-width: 85vw;
-margin: auto;
-border: 5px solid rgb(113,99,99);
+width: 75vw;
+margin: 20px auto; /* Espacio externo: 20px arriba y abajo, centrado horizontalmente */
 border-radius: 15px;
+
+
 }
+
+ol {
+    display: flex; /* Configura la lista como un contenedor flexible horizontal*/
+    counter-reset: item;
+    padding: 0;
+  }
+
+  li {
+    counter-increment: item; /* Incrementa el contador */
+    display: flex; /* Hace que los elementos hijos se alineen dentro de cada ítem */
+    flex-direction: column; /* Elementos apilados en cada ítem */
+    align-items: center; /* Centra el contenido horizontalmente */
+    margin-right: 20px; /* Espacio entre ítems */
+    list-style: none; /* Elimina el estilo de lista predeterminado */
+    text-align: center; /* Centra el texto */
+  }
+  
+  /* Insertamos el número manualmente */
+  li::before {
+    content: counter(item) "."; /* Agrega el número con un punto */
+    margin-bottom: 5px; /* Espacio entre el número y el contenido */
+    font-weight: bold; /* Para que se destaque */
+  }
+
+ /* Creacion de inputs y boton con contenedor */
+
+ #crear-actividades {
+    padding: 20px;
+    background-color: #dbb97d;
+    border-radius: 15px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  input, textarea {
+    padding: 10px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    font-size: 1em;
+  }
+  
+  button {
+    padding: 10px;
+    background-color: #5cb85c;
+    color: white;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #4cae4c;
+  }
+  
+  #contenedor-tarjetas {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  
+  .tarjeta {
+    width: 30%;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .tarjeta img {
+    width: 100%;
+    border-radius: 5px;
+  }
+  
+  
