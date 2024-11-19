@@ -13,10 +13,12 @@ html {
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #ffffff;
-    color: #000000;
+    font-family:'playfair Displey, serif';
+    background-color: #dba850;
+    color: #060c07;
+    margin: 20px;
 }
+
 
 ul, ol {
     list-style: none;

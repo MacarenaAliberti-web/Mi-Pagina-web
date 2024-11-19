@@ -1,9 +1,3 @@
-body {
-    font-family:'playfair Displey, serif';
-    background-color: #dba850;
-    color: #060c07;
-    margin: 20px;
-}
 
 .title {
     font-size: 2em;
@@ -53,7 +47,7 @@ padding: 20px; /* Espaciado interno */
 }
 
 #contenedor-seccion2 {
-background-color: #d6b57c;
+background-color: #d8b16e;
 width: 75vw;
 margin: 20px auto; /* Espacio externo: 20px arriba y abajo, centrado horizontalmente */
 border-radius: 30px;
@@ -61,11 +55,11 @@ padding: 20px;
 }
 
 #contenedor-seccion3 {
+background-color: #d8b16e;
 width: 75vw;
 margin: 20px auto; /* Espacio externo: 20px arriba y abajo, centrado horizontalmente */
-border-radius: 15px;
-
-
+border-radius: 30px;
+border: 2px solid  #d6b57c;
 }
 
 ol {
@@ -92,61 +86,34 @@ ol {
   }
 
  /* Creacion de inputs y boton con contenedor */
+ .input {
+  display: block;
+  width: 80%;
+  height: 40px;
+  background-color: azure;
+  margin: 10px auto; /* Centrado horizontal y separación entre elementos */
+  border-radius: 10px;
+  padding: 5px;
+}
 
- #crear-actividades {
-    padding: 20px;
-    background-color: #dbb97d;
-    border-radius: 15px;
-  }
-  
-  form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-  
-  input, textarea {
-    padding: 10px;
-    border: 1px solid #aaa;
-    border-radius: 5px;
-    font-size: 1em;
-  }
-  
-  button {
-    padding: 10px;
-    background-color: #5cb85c;
-    color: white;
-    font-size: 1em;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  button:hover {
-    background-color: #4cae4c;
-  }
-  
-  #contenedor-tarjetas {
-    margin-top: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-  }
-  
-  .tarjeta {
-    width: 30%;
-    border: 2px solid #ddd;
-    border-radius: 10px;
-    padding: 10px;
-    background-color: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-  }
-  
-  .tarjeta img {
-    width: 100%;
-    border-radius: 5px;
-  }
-  
-  
+.button {
+  background-color:#dba850; /* Color de fondo */
+  color: rgb(15, 13, 13); /* Color del texto */
+  font-size: 16px; /* Tamaño de fuente */
+  padding: 10px 20px; /* Espaciado interno */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer; /* Icono de mano al pasar el mouse */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para un efecto flotante */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Animaciones */
+  display: block;
+  margin: 20px auto; /* Centrar horizontalmente con espacio superior */
+}
+
+.button:hover {
+  background-color: #45a049; /* Cambiar color al pasar el mouse */
+}
+
+.button:active {
+  transform: scale(0.98); /* Efecto de clic */
+}

@@ -53,74 +53,21 @@
 
 <div id="contenedor-seccion3"> 
     
-    <section id="crear-actividades">
+    <section> 
         <h2 class="title">Mis Actividades Favoritas</h2>
-        <form id="actividad-form">
-          <label for="titulo">Título:</label>
-          <input type="text" id="titulo" placeholder="Ingresa el título" required>
-      
-          <label for="descripcion">Descripción:</label>
-          <textarea id="descripcion" placeholder="Ingresa la descripción" required></textarea>
-      
-          <label for="url">URL de la imagen:</label>
-          <input type="url" id="url" placeholder="Ingresa la URL de la imagen" required>
-      
-          <button type="submit">Crear Actividad</button>
-        </form>
-      
-        <!-- El contenedor de tarjetas está oculto inicialmente y será mostrado con JavaScript -->
-        <div id="contenedor-tarjetas" style="display: none;">
-          <!-- Las tarjetas se agregarán aquí -->
-        </div>
+        
+        <input type="text" name="TITULO" class="input" placeholder="TITULO"/>
+        <input type="text" name="DESCRIPCIÓN" class="input" placeholder="DESCRIPCIÓN"/>
+        <input type="text" name="URL DE LA IMÁGEN" class="input" placeholder="URL DE LA IMÁGEN"/>
+
+        <button type="button" class="button"> Agregar Actividad </button>
       </section>
       
-      
-
 </div>
 
 </main>
 
 <footers> </footers>
-
-<script> 
-document.getElementById("actividad-form").addEventListener("submit", function(event) {
-    // Prevenimos que el formulario se envíe de manera tradicional
-    event.preventDefault();
-  
-    // Obtenemos los valores de los inputs
-    const titulo = document.getElementById("titulo").value;
-    const descripcion = document.getElementById("descripcion").value;
-    const url = document.getElementById("url").value;
-  
-    // Validamos si todos los campos están completos
-    if (titulo && descripcion && url) {
-      // Mostramos el contenedor de tarjetas
-      document.getElementById("contenedor-tarjetas").style.display = "flex";
-  
-      // Creamos una nueva tarjeta
-      const tarjeta = document.createElement("div");
-      tarjeta.classList.add("tarjeta");
-  
-      // Agregamos el título, descripción y la imagen
-      tarjeta.innerHTML = `
-        <h3>${titulo}</h3>
-        <p>${descripcion}</p>
-        <img src="${url}" alt="Imagen de la actividad">
-      `;
-  
-      // Agregamos la tarjeta al contenedor de tarjetas
-      document.getElementById("contenedor-tarjetas").appendChild(tarjeta);
-  
-      // Limpiamos los campos del formulario
-      document.getElementById("titulo").value = '';
-      document.getElementById("descripcion").value = '';
-      document.getElementById("url").value = '';
-    } else {
-      alert("Por favor, completa todos los campos.");
-    }
-  });
-  
-</script>
 
 </body>
 
