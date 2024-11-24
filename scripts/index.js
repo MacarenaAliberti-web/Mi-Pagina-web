@@ -23,31 +23,50 @@ getAllActivities() {
 }
 
 //c)
-createActivity(title, description,imgUrl) {
-    const activity = new Activity (this.idActivity,title, description,imgUrl); 
-   
-    this.idActivity++;
+createActivity(id, title, description, imgUrl) {
+    const activity = new Activity(this.idActivity, title, description, imgUrl);
     this.activities.push(activity);
+    return activity;  // Retornar la actividad creada
 }
 
-deleteActivity(id) {
-    this.activities = this.activities.filter(activity => activity.id !== id);
 }
-}
-
 
 const repository = new Repository();
 
-// Crear actividades
-repository.createActivity('titulo 1', 'descripcion 1', 'imgUrl 1');
-repository.createActivity('titulo 2', 'descripcion 2', 'imgUrl 2');
-repository.createActivity('titulo 3', 'descripcion 3', 'imgUrl 3');
+function addActivityToDom(activity) {
+    const activitiesContainer = document.querySelector(".container");
+    const card = document.createElement("div");
+    card.className = "logo";
+    card.innerHTML= `
+   <img src="${activity.imgUrl}" alt="${activity.title}" class="logo__image" />
+    <h3 class="logo__title">${activity.title}</h3>
+    <p class="logo__description">${activity.description}</p>
+    `;
+// Agregar el evento de eliminación al hacer clic
+card.addEventListener("click", () => {
+    card.remove();  // Elimina la tarjeta del DOM
+});
 
-// Ver actividades iniciales
-console.log('Antes de eliminar:', repository.getAllActivities());
+activitiesContainer.appendChild(card);    
+}
+const form = document.getElementById("form")
+const addButton = form.querySelector(".button")
 
-// Intentar eliminar una actividad por ID
-repository.deleteActivity(2);
+addButton.addEventListener("click", () => {
+    const title = document.querySelector("#title").value;
+    const description = document.querySelector("#description").value;
+    const imgUrl = document.querySelector("#imgUrl").value;
 
-// Ver actividades después de eliminar
-console.log('Después de eliminar:', repository.getAllActivities());
+    if (!title || !description || !imgUrl) {
+        alert("Por favor, completar todos los campos.");
+        return;
+    }
+    const id = Date.now();
+    const newActivity = repository.createActivity(id, title, description, imgUrl); // Ya retorna la actividad
+    addActivityToDom(newActivity);  // Pasa correctamente la nueva actividad
+    form.reset();
+});
+
+
+
+

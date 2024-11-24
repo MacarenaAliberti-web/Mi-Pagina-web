@@ -1,14 +1,23 @@
 
 .title {
-    font-size: 2em;
+    font-size: 1.5em;
     color:#030200e3;
     text-align: center; /* Centra el texto dentro del contenedor */
     margin-bottom: 10px; /* Espacio debajo del título */
 
 } 
 
+.subtitle {
+  font-size: 2em;
+  color:#030200e3;
+  text-align: center; /* Centra el texto dentro del contenedor */
+  margin-bottom: 10px; /* Espacio debajo del título */
+
+} 
+
+
 #principal {
-    font-size: 4em;
+    font-size: clamp(2em, 5vw, 4em); /* Se adapta al tamaño de la pantalla */
     color:#0c0904;
     margin: auto;
     width: 85vw;
@@ -16,29 +25,7 @@
 
 }
 
-.logo {
-    width: 20vw;
-    border-radius: 15px;  
-    margin-top: 2em;
-    margin:auto;
-    display: block; /* Asegura que la imagen se comporte como un elemento de bloque */
-    justify-content: space-evenly;
-    transition: transform 0.3s ease;  /* Transición suave cuando cambia el tamaño */
-    padding: 20px;
-    
-}
-.logo:hover {
-        transform: scale(1.2);  /* Agranda la imagen al 120% */
-       
-    }
-
-.logo img {
-        width: 100%; /* Ajusta la imagen al contenedor */
-        border-radius: 15px; 
-        display: block; /* Evita que la imagen tenga un margen extra */
-    }
-
-#contenedor-seccion1 {
+.section {
 width: 90vw;
 margin: 20px auto; /* Espacio externo: 20px arriba y abajo, centrado horizontalmente */
 border-radius: 30px;
@@ -46,21 +33,7 @@ background-color: #d8b16e;
 padding: 20px; /* Espaciado interno */
 }
 
-#contenedor-seccion2 {
-background-color: #d8b16e;
-width: 90vw;
-margin: 20px auto; /* Espacio externo: 20px arriba y abajo, centrado horizontalmente */
-border-radius: 30px;
-padding: 20px;
-}
 
-#contenedor-seccion3 {
-background-color: #d8b16e;
-width: 90vw;
-margin: 20px auto; /* Espacio externo: 20px arriba y abajo, centrado horizontalmente */
-border-radius: 30px;
-border: 2px solid  #d6b57c;
-}
 
 ol {
     display: flex; /* Configura la lista como un contenedor flexible horizontal*/
@@ -80,15 +53,15 @@ ol {
   
   /* Insertamos el número manualmente */
   li::before {
-    content: counter(item) "."; /* Agrega el número con un punto */
-    margin-bottom:; /* Espacio entre el número y el contenido */
+    content: counter(item); /* Agrega el número con un punto */
+    margin-bottom: 5px; /* Espacio entre el número y el contenido */
     font-weight: bold; /* Para que se destaque */
   }
 
  /* Creacion de inputs y boton con contenedor */
  .input {
   display: block;
-  width: 80%;
+  width: 100%;
   height: 40px;
   background-color: azure;
   margin: 10px auto; /* Centrado horizontal y separación entre elementos */
@@ -116,4 +89,63 @@ ol {
 
 .button:active {
   transform: scale(0.98); /* Efecto de clic */
+}
+
+.container {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center; /* Centra los elementos horizontalmente */
+  align-items: center; /* Centra los elementos verticalmente */
+  text-align: center; /* Centra el texto dentro de los elementos, si es necesario */
+
+}
+
+.card {
+  width: 20vw;
+  border-radius: 15px;  
+  margin-top: 2em;
+  margin:auto;
+  display: block; /* Asegura que la imagen se comporte como un elemento de bloque */
+  transition: transform 0.3s ease;  /* Transición suave cuando cambia el tamaño */
+  padding: 20px;
+  
+}
+.card:hover {
+      transform: scale(1.2);  /* Agranda la imagen al 120% */
+     
+  }
+
+.card img {
+      width: 200%; /* Ajusta la imagen al contenedor */
+      border-radius: 15px; 
+      display: block; /* Evita que la imagen tenga un margen extra */
+  }
+.logo__image {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 10px;
+    justify-self: center;
+}
+
+.logo__title {
+  font-size: 1.2em;
+  text-align: center;
+}
+
+.logo__description {
+  text-align: center;
+}
+
+.form__label {
+  font-weight: bold;
+  margin-top: 5px;
+  display: block;
+}
+
+.activities__form{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }

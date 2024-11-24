@@ -9,65 +9,71 @@
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
-    <header>
-        
-        <h1 class="title" id="principal">Presentación Personal </h1>
-       
+<!-- Contenedor principal de mi pagina -->     
+    <header>      
+        <h1 class="title" id="principal">¡Hola! Soy Macarena</h1>
+        <h2 class="title"> Bienvenidos a mi pagina de presentacion</h2>
 </header>
 <main>
-    <div id="contenedor-seccion1"> 
-    <section>
-        <h2 class="title">¡Hola! Mi nombre es Macarena Ailen Aliberti </h2>
-        <p>Soy docente residente en Ituzaingó, Buenos Aires. Licenciada y Profesora Nacional de Educación Física, pero en los últimos años descubrí una nueva afinidad: la programación. 
+<!-- Seccion 1: "Sobre mi" -->     
+    <section class = "section">
+        <h3 class="subtitle">Un poco sobre mi </h3>
+        <p>Mi nombre es Macarena Aliberti, soy docente residente en Ituzaingó, Buenos Aires. Licenciada y Profesora Nacional de Educación Física, pero en los últimos años descubrí una nueva afinidad: la programación. 
             Después de realizar algunos cursos, me cautivó todo lo que podía crear con la tecnología. 
             Este entusiasmo me llevó a los 31 años a iniciar mi formación en Henry, donde estoy creciendo en este fascinante campo lleno de oportunidades. </p>
         <p>Estoy emocionada por todo lo que me espera y por cómo puedo combinar mis habilidades previas con este nuevo camino profesional. </p>
     </section>
 
-</div>
-<div id="contenedor-seccion2"> 
-    <section>
-        <h2 class="title">Mis Tecnologias Favoritas</h2>
-        <p> Cuando comencé a sumergirme en este nuevo mundo de la Programación, conocí Tecnologías nuevas tales como ChatGPT, HTML, CSS, GitHub, GitBash, JavaScript, entre otras, cada una de ellas con su particularidad, funcionalidad y complejidad con las que sigo trabajando y aprendiendo día a día. A continuación presento tres de ellas.</p>
-    <ol>
-        <div class="logo">
-        
-        <li>
-            <div class="nombreImagen">    
-            <span>GITBASH</span>
-            </div>
-            <img src="Imagenes/git bash.jpg" />
-        </div>
-       </li>
-       <div class="logo">
-    <li>GPT<img src="Imagenes/OpenAI GPT.jpg" />
-    </div>
+
+<!-- Seccion 2: "Mis Tecnologias Favoritas" --> 
+    <section class = "section">
+        <h3 class="subtitle">Mis Tecnologias Favoritas</h3>
+        <p> Cuando comencé a sumergirme en este nuevo mundo de la Programación, conocí Tecnologías nuevas tales como ChatGPT, HTML, CSS, GitHub, GitBash, JavaScript, entre otras, cada una de ellas con su particularidad, funcionalidad y complejidad con las que sigo trabajando y aprendiendo día a día. A continuación enumero tres de ellas.</p>
+<!-- Tarjeta 1 / Logo 1 -->    
+     <ol>
+        <li class="card">
+           <img src="assets/git bash.jpg"  alt="Logo de Git Bash" class="logo__image"/>
+           <p class="logo__title"> GIT BASH </p>
+   </li>
+<!-- Tarjeta 2 / Logo 2 -->  
+    <li class="card">
+        <img src="assets/OpenAI GPT.jpg" alt="Logo de OpenAI GPT" class="logo__image"/>
+        <p class="logo__title"> GPT </p>
         </li>
-        <div class="logo">
-    <li>HTML<img src="Imagenes/html.png" /> 
-        </div>
+<!-- Tarjeta 3 / Logo 3 -->          
+    <li class="card">
+        <img src="assets/html.png" alt="Logo de HTML" class="logo__image"/> 
+        <p class="logo__title"> HTML </p>
         </li>
     </ol>
 </section>
-</div>
 
-<div id="contenedor-seccion3"> 
+<!-- Seccion 3: "Mis Actividades Favoritas" -->    
+    <section class = "section"> 
+        <h3 class="subtitle">Mis Actividades Favoritas</h3>
+<!-- Contenedor para los inputs -->  
+ <form class="activities__form" id="form">  
+    <label for="title" class="form__label">Título de la Actividad:</label>     
+    <input type="text" id="title" class="input" placeholder="Escribe el titulo"/>
     
-    <section> 
-        <h2 class="title">Mis Actividades Favoritas</h2>
-        
-        <input type="text" name="TITULO" class="input" placeholder="TITULO"/>
-        <input type="text" name="DESCRIPCIÓN" class="input" placeholder="DESCRIPCIÓN"/>
-        <input type="text" name="URL DE LA IMÁGEN" class="input" placeholder="URL DE LA IMÁGEN"/>
+    <label for="description" class="form__label">Descripción:</label>   
+    <input type="text" id="description" class="input" placeholder="Escribe la descripcion"/>
 
-        <button type="button" class="button"> Agregar Actividad </button>
-      </section>
+    <label for="imgUrl" class="form__label">URL de la Imagen:</label>
+    <input type="text" id="imgUrl" class="input" placeholder="Escribe la URL"/>
+    
+    <button type="button" class="button"> Agregar Actividad </button>
       
-</div>
+    </form>
+<!-- Contenedor para las tarjetas en las que apareceran las actividades --> 
+ <div class="container">
+<!-- Aca se van a ver las tarjetas generadas con js --> 
+
+ </div>     
+</section>
 
 </main>
 
-<footers> </footers>
 <script src="./scripts/index.js"></script>  
 </body>
 
