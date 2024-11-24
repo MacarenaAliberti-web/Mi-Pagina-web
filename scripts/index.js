@@ -8,26 +8,23 @@ class Activity  {
 }
                     
 class Repository {  
-                     
-                     
     constructor() {
-        this.activities = []; 
-        this.idActivity = 1;  
-                              
+        this.activities = [];                         
     }
 
 
-//b)
 getAllActivities() {
     return this.activities;
 }
 
-//c)
 createActivity(id, title, description, imgUrl) {
     const activity = new Activity(this.idActivity, title, description, imgUrl);
     this.activities.push(activity);
-    return activity;  // Retornar la actividad creada
+    return activity;  
 }
+deleteActivity(id) { 
+    this.activities = this.activities.filter(activity => activity.id !== id);
+} 
 
 }
 
