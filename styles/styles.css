@@ -16,7 +16,7 @@
 
 
 #principal {
-    font-size: clamp(2em, 5vw, 4em); /* Se adapta al tamaño de la pantalla */
+    font-size: clamp(2em, 5vw, 4em); 
     color:#0c0904;
     margin: auto;
     width: 85vw;
@@ -26,7 +26,7 @@
 
 .section {
 width: 90vw;
-margin: 20px auto; /* Espacio externo: 20px arriba y abajo, centrado horizontalmente */
+margin: 20px auto; 
 border-radius: 30px;
 background-color: #d8b16e;
 padding: 20px; /* Espaciado interno */
@@ -42,11 +42,11 @@ ol {
 
   li {
     counter-increment: item; /* Incrementa el contador */
-    display: flex; /* Hace que los elementos hijos se alineen dentro de cada ítem */
+    display: flex; 
     flex-direction: column; 
-    align-items: center; /* Centra el contenido horizontalmente */
+    align-items: center; 
     margin-right: 20px; 
-    list-style: none; /* Elimina el estilo de lista predeterminado */
+    list-style: none; 
     text-align: center; 
   }
   
@@ -79,7 +79,7 @@ ol {
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para un efecto flotante */
   transition: background-color 0.3s ease, transform 0.2s ease; /* Animaciones */
   display: block;
-  margin: 20px auto; /* Centrar horizontalmente con espacio superior */
+  margin: 20px auto; 
 }
 
 .button:hover {
@@ -112,14 +112,14 @@ ol {
   margin-top: 2em;
   margin:auto;
   display: block; /* Asegura que la imagen se comporte como un elemento de bloque */
-  transition: transform 0.3s ease;  /* Transición suave cuando cambia el tamaño */
+  transition: transform 0.3s ease;  
   padding: 20px;
   overflow: hidden;
   
   
 }
 .card:hover {
-      transform: scale(1.1);  /* Agranda la imagen al 120% */
+      transform: scale(1.1);  
      
   }
 
