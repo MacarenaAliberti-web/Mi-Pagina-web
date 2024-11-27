@@ -1,18 +1,17 @@
 
 .title {
     font-size: 1.5em;
-    color:#1d1c19e3;
-    text-align: center; /* Centra el texto dentro del contenedor */
-    margin-bottom: 10px; /* Espacio debajo del título */
+    color: #1d1c19;
+    text-align: center; 
+    margin-bottom: 10px; 
 
 } 
 
 .subtitle {
   font-size: 2em;
   color:#030200e3;
-  text-align: center; /* Centra el texto dentro del contenedor */
-  margin-bottom: 10px; /* Espacio debajo del título */
-
+  text-align: center; 
+  margin-bottom: 10px; 
 } 
 
 
@@ -44,16 +43,16 @@ ol {
   li {
     counter-increment: item; /* Incrementa el contador */
     display: flex; /* Hace que los elementos hijos se alineen dentro de cada ítem */
-    flex-direction: column; /* Elementos apilados en cada ítem */
+    flex-direction: column; 
     align-items: center; /* Centra el contenido horizontalmente */
-    margin-right: 20px; /* Espacio entre ítems */
+    margin-right: 20px; 
     list-style: none; /* Elimina el estilo de lista predeterminado */
-    text-align: center; /* Centra el texto */
+    text-align: center; 
   }
   
   /* Insertamos el número manualmente */
   li::before {
-    content: counter(item); /* Agrega el número con un punto */
+    content: counter(item); 
     margin-bottom: 5px; /* Espacio entre el número y el contenido */
     font-weight: bold; /* Para que se destaque */
   }
@@ -70,12 +69,12 @@ ol {
 }
 
 .button {
-  background-color:#dba850; /* Color de fondo */
-  color: rgb(15, 13, 13); /* Color del texto */
-  font-size: 16px; /* Tamaño de fuente */
-  padding: 10px 20px; /* Espaciado interno */
-  border: none; /* Sin borde */
-  border-radius: 5px; /* Bordes redondeados */
+  background-color:#dba850; 
+  color: rgb(15, 13, 13); 
+  font-size: 16px; 
+  padding: 10px 20px; 
+  border: none; 
+  border-radius: 5px; 
   cursor: pointer; /* Icono de mano al pasar el mouse */
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para un efecto flotante */
   transition: background-color 0.3s ease, transform 0.2s ease; /* Animaciones */
@@ -91,42 +90,51 @@ ol {
   transform: scale(0.98); /* Efecto de clic */
 }
 
+
 .container {
   margin-top: 20px;
   display: flex;
   flex-wrap: wrap;
-  gap: 15px;
-  justify-content: center; /* Centra los elementos horizontalmente */
-  align-items: center; /* Centra los elementos verticalmente */
-  text-align: center; /* Centra el texto dentro de los elementos, si es necesario */
+  gap: 20px;
+  justify-content: center; 
+  align-items: center; 
+  text-align: center; 
+  
 
 }
 
 .card {
   width: 20vw;
+  height: auto;
+  max-width: 300px;  /* Limita el tamaño máximo */
+  min-width: 200px;  /* Limita el tamaño mínimo */
   border-radius: 15px;  
   margin-top: 2em;
   margin:auto;
   display: block; /* Asegura que la imagen se comporte como un elemento de bloque */
   transition: transform 0.3s ease;  /* Transición suave cuando cambia el tamaño */
   padding: 20px;
+  overflow: hidden;
+  
   
 }
 .card:hover {
-      transform: scale(1.2);  /* Agranda la imagen al 120% */
+      transform: scale(1.1);  /* Agranda la imagen al 120% */
      
   }
 
 .card img {
-      width: 200%; /* Ajusta la imagen al contenedor */
+      width: 100%; 
       border-radius: 15px; 
       display: block; /* Evita que la imagen tenga un margen extra */
+      transition: transform 0.3s ease; 
   }
 .logo__image {
     width: 200px;
     height: 200px;
     margin-bottom: 10px;
     justify-self: center;
+    
 }
 
 .logo__title {
@@ -148,4 +156,5 @@ ol {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  
 }

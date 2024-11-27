@@ -18,7 +18,7 @@ getAllActivities() {
 }
 
 createActivity(id, title, description, imgUrl) {
-    const activity = new Activity(this.idActivity, title, description, imgUrl);
+    const activity = new Activity(id, title, description, imgUrl);
     this.activities.push(activity);
     return activity;  
 }
@@ -29,6 +29,7 @@ deleteActivity(id) {
 }
 
 const repository = new Repository();
+
 
 function addActivityToDom(activity) {
     const activitiesContainer = document.querySelector(".container");
