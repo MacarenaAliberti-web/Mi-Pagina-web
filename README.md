@@ -31,7 +31,7 @@ Esta página está desarrollada con HTML, CSS y JavaScript puro. En ella compart
 - JavaScript (ES6)  
 - Git y GitHub  
 - Git Bash  
-- Jest (para testing)
+- Pruebas con Jasmine
 
 ---
 
@@ -84,12 +84,8 @@ Este proyecto me permitió combinar lo técnico con lo personal. Fue mi primer a
    ```
 
 5. Para correr los tests:
-  ```bash
+   ```bash
    npm test
    ```
 
----
-
 ¡Gracias por visitar mi proyecto! 🙋‍♀️✨
-
----
