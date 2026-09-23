@@ -52,7 +52,7 @@ npm test
 ## 👩‍💻 Autor
 
 **Macarena Aliberti**  
-Desarrolladora Frontend con formación en desarrollo Full Stack
+Desarrolladora Full Stack
 
 ---
 
