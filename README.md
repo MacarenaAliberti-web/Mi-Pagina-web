@@ -20,7 +20,7 @@ Esta página está desarrollada con HTML, CSS y JavaScript puro. En ella compart
 - Estilos responsivos con CSS puro.
 - Agregado dinámico de actividades usando JavaScript.
 - Manejo de clases y objetos para gestionar actividades.
-- Pruebas con Jest para verificar el correcto funcionamiento de la lógica.
+- Pruebas con Jasmine para verificar el correcto funcionamiento de la lógica.
 
 ---
 
